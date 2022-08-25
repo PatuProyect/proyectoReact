@@ -1,7 +1,7 @@
-import React,{Component, createElement} from 'react';
+import React,{Component} from 'react';
 
 
-let stock = 5;
+let stock = 15;
 
 
 class Contador extends Component {
