@@ -1,0 +1,15 @@
+.btn-section button{
+    background-color: grey;
+    border-radius: 5px;
+    margin-left: 10px;
+    height: 40px;
+    font-size: 10px;
+}
+.btn-section{
+    margin: 5px;
+    height: 45px;
+}
+
+.CounterSection{
+    font-size:  10px;
+}

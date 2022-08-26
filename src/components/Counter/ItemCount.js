@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-
+import "./Styles.css";
 
 let stock = 15;
 
@@ -52,11 +52,11 @@ class Contador extends Component {
 					<p>Stock Total {stock}</p>
 					<p>Cantidad Seleccionada: {this.state.counter}</p>
 					<div className='btn-section'>
-						<button onClick={this.handlerCounterUp}>+</button>
 						<button onClick={this.handlerCounterDown}>-</button>
+						<button onClick={this.handlerCounterUp}>+</button>
 					</div>
-					<div>
-						<p>Stock en Carrito {this.state.stockCarrito}</p>
+					<p>Stock en Carrito {this.state.stockCarrito}</p>
+					<div className='btn-section'>
 						<button onClick={this.handlerCounterAdd}>Agregar</button>
 						<button onClick={this.handlerCounterRemove}>Vaciar</button>
 
