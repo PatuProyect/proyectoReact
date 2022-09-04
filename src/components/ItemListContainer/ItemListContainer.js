@@ -1,11 +1,12 @@
-
 import * as React from 'react';
 import ItemList from "../Item/ItemList"
 
-function MediaCard() {
+function ItemListContainer() {
     return (
+        <div>
             <ItemList />
+        </div>
     );
 }
 
-export default MediaCard;
+export default ItemListContainer;
