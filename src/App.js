@@ -7,12 +7,8 @@ import About from './view/About/About';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ItemDetailContainer from './view/ItemDetailContainer/ItemDetailContainer';
 import Category from './components/Category/NavCategory';
-import Clothes from './view/Clothes/Clothes';
-import Others from './view/Others/Others';
-import Electronics from './view/Electronics/Electronics';
-import Shoes from './view/Shoes/Shoes';
-import Furniture from './view/Furniture/Furniture';
-import Cart from './components/Cart/Cart';
+import Cart from './view/Cart/Cart';
+import CategoryList from './components/Category/CategoryList';
 
 function App() {
   return (
@@ -26,11 +22,7 @@ function App() {
             <Route path='/Contact' element={<Contact />} />
             <Route path='/About' element={<About />} />
             <Route path='/detail/:id' element={<ItemDetailContainer />} />
-            <Route path='/clothes' element={<Clothes />} />
-            <Route path='/electronics' element={<Electronics />} />
-            <Route path='/shoes' element={<Shoes />} />
-            <Route path='/others' element={<Others />} />
-            <Route path='/furniture' element={<Furniture />} />
+            <Route path='/category/:categoryid' element={<CategoryList />} />
             <Route path='/cart' element={<Cart />} />
           </Routes>
       </header>
