@@ -1,8 +1,8 @@
 import React,{Component} from 'react';
+import { Link } from 'react-router-dom';
 import "./Styles.css";
 
 let stock = 15;
-
 
 class Contador extends Component {
 	constructor() {
@@ -45,6 +45,12 @@ class Contador extends Component {
 		}
 	}
 
+	addCart = () =>{
+		console.log("hola")
+
+	}
+
+
 	render() {
 		return ( 
 				
@@ -59,10 +65,12 @@ class Contador extends Component {
 					<div className='btn-section'>
 						<button onClick={this.handlerCounterAdd}>Agregar</button>
 						<button onClick={this.handlerCounterRemove}>Vaciar</button>
-
 					</div>
+					<Link to="/cart">
+						<button onClick={this.addCart}>Ir al Carrito</button>
+					</Link>
 				</div>
-			
+
 		);
 	}
 } export default Contador;
