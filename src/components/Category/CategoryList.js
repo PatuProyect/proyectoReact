@@ -7,7 +7,7 @@ import axios from 'axios';
 const CategoryList = () => {
 	const [users, setUsers] = useState([]);
 	
-	const {categoryid} = useParams()
+	const {categoryid} = useParams();
 	
 	useEffect(() => {
 			axios(`https://api.escuelajs.co/api/v1/categories/${categoryid}/products`).then((res) =>

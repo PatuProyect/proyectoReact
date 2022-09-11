@@ -1,76 +1,35 @@
-import React,{Component} from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect} from 'react';
 import "./Styles.css";
 
-let stock = 15;
 
-class Contador extends Component {
-	constructor() {
-		super();
+const ItemCount = ({initial, stock, onAdd}) => {
 
-		this.state = {
-			counter: 0,
-			stockCarrito: 0
-		};
+	const [count, setCount] = useState(initial);
 
+	const increase = ()=>{
+		setCount(count + 1);
 	}
 
-	handlerCounterUp = () => {
-		if (this.state.counter < stock && stock > 0) {
-			this.setState({ counter: this.state.counter + 1 });
-		} else {
-			alert("Sin Stock")
-		};
-		
-	};
-	handlerCounterDown = () => {
-		if (this.state.counter > 0) {
-			this.setState({ counter: this.state.counter - 1 });
-		}
-	};
-
-	handlerCounterAdd = () =>{
-		if(this.state.counter > 0 && this.state.stockCarrito >= 0 && stock > 0 && this.state.counter <= stock) {
-			this.setState({stockCarrito: this.state.counter + this.state.stockCarrito});
-			stock = stock - this.state.counter;
-		}else{
-			alert("Sin Stock")
-		}
+	const decrease = ()=>{
+		setCount(count - 1);
 	}
 
-	handlerCounterRemove=()=>{
-		if(this.state.stockCarrito > 0 && stock >= 0){
-			stock = this.state.stockCarrito + stock;
-			this.setState({stockCarrito: 0})
-		}
-	}
+	useEffect(()=>{
+		setCount(parseInt(initial))
+	},[initial])
 
-	addCart = () =>{
-		console.log("hola")
-
-	}
-
-
-	render() {
 		return ( 
-				
 				<div className='CounterSection'>
 					<p>Stock Total {stock}</p>
-					<p>Cantidad Seleccionada: {this.state.counter}</p>
+					<p>Cantidad Seleccionada: {count}</p>
 					<div className='btn-section'>
-						<button onClick={this.handlerCounterDown}>-</button>
-						<button onClick={this.handlerCounterUp}>+</button>
+						<button disabled={count <= 1} onClick={decrease}>-</button>
+						<button disabled={count >= stock} onClick={increase}>+</button>
 					</div>
-					<p>Stock en Carrito {this.state.stockCarrito}</p>
-					<div className='btn-section'>
-						<button onClick={this.handlerCounterAdd}>Agregar</button>
-						<button onClick={this.handlerCounterRemove}>Vaciar</button>
+					<div>
+						<button disabled={stock <= 0} onClick={()=> onAdd(count)}>Agregar al carrito</button>
 					</div>
-					<Link to="/cart">
-						<button onClick={this.addCart}>Ir al Carrito</button>
-					</Link>
 				</div>
-
 		);
-	}
-} export default Contador;
+} 
+export default ItemCount;

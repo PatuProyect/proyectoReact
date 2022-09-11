@@ -1,4 +1,5 @@
 import './App.css';
+import React from 'react';
 import NavBar from './components/NavBar';
 import "bootstrap/dist/css/bootstrap.min.css" ;
 import Home from './view/Home/Home';
@@ -9,11 +10,15 @@ import ItemDetailContainer from './view/ItemDetailContainer/ItemDetailContainer'
 import Category from './components/Category/NavCategory';
 import Cart from './view/Cart/Cart';
 import CategoryList from './components/Category/CategoryList';
+import CartProvider from './Context/CartContext';
+
+
 
 function App() {
   return (
     <div className="App">
       <Router>
+      <CartProvider>
       <NavBar />
       <Category />
       <header className="App-header">
@@ -26,6 +31,7 @@ function App() {
             <Route path='/cart' element={<Cart />} />
           </Routes>
       </header>
+      </CartProvider>
       </Router>
     </div>
   );

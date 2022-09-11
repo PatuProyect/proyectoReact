@@ -5,6 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
+
 const Item = ({ data }) => {
 
 	return (
@@ -16,9 +17,6 @@ const Item = ({ data }) => {
 						<Typography gutterBottom variant='h5' component='div'>
 							{data.title}
 						</Typography>
-{/* 						<Typography variant='body2' color='text.secondary'>
-							{data.species}
-						</Typography>  */}
 					</CardContent>
 				</CardActionArea>
 			</Card>
