@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+/* import React, { useState, useEffect } from 'react';
 import Item from "../Item/Item"
 import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
@@ -30,4 +30,4 @@ const CategoryList = () => {
 	);  
 };
 
-export default CategoryList;
+export default CategoryList; */

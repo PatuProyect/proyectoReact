@@ -12,7 +12,7 @@ const Item = ({ data }) => {
 		<div>
 			<Card sx={{ maxWidth: 300, margin: 5 }}>
 				<CardActionArea >
-					<CardMedia component='img' image={data.images[1]} alt='green iguana' sx={{ width: 300 }} />
+					<CardMedia component='img' image={data.images} alt='green iguana' sx={{ width: 300 }} />
 					<CardContent>
 						<Typography gutterBottom variant='h5' component='div'>
 							{data.title}

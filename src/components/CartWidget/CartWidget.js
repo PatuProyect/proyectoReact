@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { useCartContext } from "../../Context/CartContext";
 
 
@@ -8,7 +7,7 @@ export const CartWidget = ()=>{
 
     return(
         <>
-            <i to="/cart" className="bi bi-cart3"></i>
+            <i  className="bi bi-cart3"></i>
             <span>{totalProducts() || ""}</span>
         </>
     )

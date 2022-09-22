@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 const Category = () => {
@@ -10,19 +10,19 @@ const Category = () => {
             <h1>Category</h1>
             <ul className="nav justify-content-center">
                 <li className="nav-item">
-                    <Link className="nav-link" to="/category/4">Shoes</Link>
+                    <NavLink className="nav-link" to="/categoria/Shoes">Shoes</NavLink>
                 </li>
                 <li className="nav-item">
-                    <Link className="nav-link" to="/category/1">Clothes</Link>
+                    <NavLink className="nav-link" to="/categoria/Clothes">Clothes</NavLink>
                 </li>
                 <li className="nav-item">
-                    <Link className="nav-link" to="/category/2">Electronics</Link>
+                    <NavLink className="nav-link" to="/categoria/Electronics">Electronics</NavLink>
                 </li>
                 <li className="nav-item">
-                    <Link className="nav-link" to="/category/3">Furniture</Link>
+                    <NavLink className="nav-link" to="/categoria/Furniture">Furniture</NavLink>
                 </li>
                 <li className="nav-item">
-                    <Link className="nav-link" to="/category/5">Others</Link>
+                    <NavLink className="nav-link" to="/categoria/others">Others</NavLink>
                 </li>
             </ul>
         </div>

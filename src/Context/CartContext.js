@@ -26,8 +26,6 @@ const CartProvider = ({children}) =>{
         setCart(newCart)
     }
     
-    console.log(cart)
-
     return(
         <CartContext.Provider value={{
             clearCart,
